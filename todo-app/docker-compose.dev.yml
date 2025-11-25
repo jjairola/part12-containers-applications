@@ -1,8 +1,8 @@
 services:
   mongo:
     image: mongo
-    ports:
-      - 3456:27017
+#    ports:
+#      - 3456:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -13,8 +13,8 @@ services:
 
   redis:
     image: redis
-    ports:
-      - 6379:6379
+#    ports:
+#      - 6379:6379
     volumes:
       - redis_data:/data
   app:
@@ -22,12 +22,13 @@ services:
     build:
       context: ./todo-frontend/
       dockerfile: Dockerfile.dev
-    ports:
-      - 5173:5173
+#    ports:
+#      - 5173:5173
     volumes:
       - ./todo-frontend/src/:/usr/src/app/src
     environment:
-      - VITE_BACKEND_URL=http://localhost:3000
+#      - VITE_BACKEND_URL=http://localhost:3000
+      - VITE_BACKEND_URL=http://localhost:8080/api
 
   server:
     image: todo-back-dev
@@ -36,8 +37,8 @@ services:
       dockerfile: dev.Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/app
-    ports:
-      - 3000:3000
+#    ports:
+#      - 3000:3000
     environment:
       - PORT=3000
       - REDIS_URL=redis://redis:6379
