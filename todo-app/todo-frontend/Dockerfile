@@ -16,7 +16,8 @@ WORKDIR /usr/src/app
 
 COPY --from=test /usr/src/app .
 
-ENV VITE_BACKEND_URL=http://localhost:3000
+ARG VITE_BACKEND_URL
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 
 RUN npm run build
 
