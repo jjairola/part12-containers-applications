@@ -1,0 +1,72 @@
+Script started on Tue Nov 25 20:51:16 2025
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [Kddocker ps [?1l>[?2004l
+]2;docker ps]1;dockerCONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+ff9b8d21fa80   mongo     "docker-entrypoint.s…"   31 minutes ago   Up 31 minutes   0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker exec -it [7mff9b8d21fa80[27m[12D[27mf[27mf[27m9[27mb[27m8[27md[27m2[27m1[27mf[27ma[27m8[27m0 mong [Koosh -p user      u root -p secret[?1l>[?2004l
+]2;docker exec -it ff9b8d21fa80 mongosh -u root -p secret]1;docker]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6925eca83dd1b364dab1ddf3
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.9[0m
+MongoServerError: Authentication failed.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;31m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hsshow dbs[?1l>[?2004l
+]2;show dbs]1;showzsh: command not found: show
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;31m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hshow dbs[8Ddocker exec -it ff9b8d21fa80 mongosh -u root -p secret[Kexa        e  example[?1l>[?2004l
+]2;docker exec -it ff9b8d21fa80 mongosh -u root -p example]1;docker]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6925ecc16a39b44814b1ddf3
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.9[0m
+Using MongoDB:		8.2.2
+[1m[33mUsing Mongosh[0m:		2.5.9
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[?2004h[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2025-11-25T17:19:42.713+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2025-11-25T17:19:42.885+00:00: For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile
+   2025-11-25T17:19:42.885+00:00: We suggest setting the contents of sysfsFile to 0.
+   2025-11-25T17:19:42.885+00:00: vm.max_map_count is too low
+   2025-11-25T17:19:42.885+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         60.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_ata[1G[0Jtest> use the_at[17G[1G[0Jtest> use the_a[16G[1G[0Jtest> use the_[15Gdatabase
+switched to db the_database
+[1G[0Jthe_database> [15Gsho wco[1G[0Jthe_database> sho wc[21G[1G[0Jthe_database> sho w[20G[1G[0Jthe_database> sho [19G[1G[0Jthe_database> sho[18Gw collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gfind[1G[0Jthe_database> fin[18G[1G[0Jthe_database> fi[17G[1G[0Jthe_database> f[16G[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'6925e52d75e36a22c1b1ddf4'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'6925e52d75e36a22c1b1ddf5'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'6925ec69d02b7e9278b1ddf4'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne({
+[1G[0J... [5G  text: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m [32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m,
+[1G[0J... [5G  d[36mdo[39mdone: fals[33mfalse[39m
+[1G[0J... [5G})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'6925ece16a39b44814b1ddf4'[39m)
+}
+[1G[0Jthe_database> [15G
+
+[1G[0Jthe_database> [15Gexit
+[?2004le[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hxxit[?1l>[?2004l
+]2;xit]1;xitzsh: command not found: xit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;31m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+
+Script done on Tue Nov 25 20:52:39 2025

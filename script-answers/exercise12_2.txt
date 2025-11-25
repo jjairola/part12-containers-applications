@@ -1,0 +1,14 @@
+Script started on Tue Nov 25 19:43:58 2025
+Restored session: ti 25 marraskuuta 2025 19:42:33 MSK
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[7mdocker container run -it ubuntu b[7ma[7msh[27m[K[A[44C[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mba[27ms[27mh[?1l>[?2004l
+]2;docker container run -it ubuntu bash]1;docker[?2004h]0;root@b56baa1f3a41: /root@b56baa1f3a41:/# mkdir [7m/usr/src/app[27m/usr/src/app
+[?2004l[?2004h]0;root@b56baa1f3a41: /root@b56baa1f3a41:/# touch [7m/usr/src/app/index.js[27m
+[Aroot@b56baa1f3a41:/# touch /usr/src/app/index.js
+[A
+[?2004l[?2004h]0;root@b56baa1f3a41: /root@b56baa1f3a41:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications]2;jjairola@stpetersburg]1;..-applications]7;file://stpetersburg.local/Users/jjairola/Desktop/part12-containers-applications\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+
+Script done on Tue Nov 25 19:44:24 2025
