@@ -2,7 +2,7 @@ services:
   mongo:
     image: mongo
     ports:
-     - 3456:27017
+      - 3456:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -16,6 +16,21 @@ services:
       - 6379:6379
     volumes:
       - redis_data:/data
+  app:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - PORT=3000
+      - REDIS_URL=redis://redis:6379
+      - MONGO_URL=mongodb://root:example@mongo:27017/the_database?authSource=admin
+    depends_on:
+      - mongo
+      - redis
 
 volumes:
   mongo_data:
