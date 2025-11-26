@@ -1,0 +1,23 @@
+/* styles for notifications */
+
+.notification {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.notification.error {
+  border: 2px solid red;
+  color: red;
+  background-color: #ffcccc;
+  border-radius: 5px;
+}
+
+.notification.success {
+  border: 2px solid green;
+  color: green;
+  background-color: #ccffcc;
+  border-radius: 5px;
+}
